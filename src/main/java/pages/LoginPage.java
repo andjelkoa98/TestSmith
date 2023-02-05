@@ -1,12 +1,7 @@
 package pages;
 
-import Model.LoginUserModel;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import utils.Utils;
-
-import java.util.List;
 
 public class LoginPage extends BasePage{
 
@@ -33,7 +28,7 @@ public class LoginPage extends BasePage{
         clickOnElement(loginButton);
         return this;
     }
-    public LoginPage SingleLoginPage(String username, String password){
+    public LoginPage singleLoginPage(String username, String password){
             clickOnElement(signInLink);
             typeIn(emailField, username);
             typeIn(passwordField, password);

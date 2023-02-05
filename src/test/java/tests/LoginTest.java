@@ -23,7 +23,7 @@ public class LoginTest extends BaseTest{
     public void singleLoginUserTest(){
         List<LoginUserModel> list = Utils.getDataFromJson();
         for (int i = 0; i < list.size(); i++) {
-            loginPage.SingleLoginPage(list.get(i).getUsername(),list.get(i).getPassword());
+            loginPage.singleLoginPage(list.get(i).getUsername(),list.get(i).getPassword());
             softAssert.assertTrue(loginPage.isLoginPassed());
             softAssert.assertAll();
         }

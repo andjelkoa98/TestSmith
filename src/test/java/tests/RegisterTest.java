@@ -18,9 +18,10 @@ public class RegisterTest extends BaseTest{
     }
 
     @Test
-    public void registerUserTest(){
+    public void registerUserTest() throws InterruptedException {
         registerPage.goToRegisterPage()
                 .registerUser();
+        Thread.sleep(2000);
         loginPage.loginUser(registerPage.getUsername(), registerPage.getPassword());
 
         softAssert.assertTrue(registerPage.isUserRegistered());
