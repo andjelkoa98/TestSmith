@@ -21,9 +21,10 @@ public class WishListTest extends BaseTest{
     }
 
     @Test
-    public void addProductToWishList(){
+    public void addProductToWishList() throws InterruptedException {
         registerPage.goToRegisterPage()
                 .registerUser();
+        Thread.sleep(2000);
         loginPage.loginUser(registerPage.getUsername(), registerPage.getPassword());
 
         softAssert.assertTrue(registerPage.isUserRegistered());
